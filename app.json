@@ -5,7 +5,7 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#000",
-    "navigationBarTitleText": "wx-drawer",
+    "navigationBarTitleText": "YouAndMe",
     "navigationBarTextStyle":"white"
   }
 }

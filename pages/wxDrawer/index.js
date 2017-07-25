@@ -11,7 +11,31 @@ Page({
       menuWidth: 0,
       offsetLeft: 0,
       tStart: true
-    }
+    },
+    page: {
+      title: '她',
+      viewPage: 'index'
+    },
+    banners: [
+      {
+        id: 3,
+        img: '../../imgs/banner1.jpg',
+        url: '',
+        name: '头像'
+      },
+      {
+        id: 1,
+        img: 'http://wxapp.im20.com.cn/impublic/waimai/imgs/index/banner_1.jpg',
+        url: '',
+        name: '告别午高峰'
+      },
+      {
+        id: 2,
+        img: 'http://wxapp.im20.com.cn/impublic/waimai/imgs/index/banner_2.jpg',
+        url: '',
+        name: '金牌好店'
+      }
+    ],
   },
   onLoad() {
     try {
@@ -90,6 +114,42 @@ Page({
     if(ui.offsetLeft == 0) {
       ui.offsetLeft = ui.menuWidth;
       this.setData({ui: ui})
+    }
+  },
+  gotoIndex(e) {
+    let { ui } = this.data;
+    let title = "她";
+    let viewPage = 'index';
+    let { page } = this.data;
+    page.title = title;
+    page.viewPage = viewPage;
+    if (ui.offsetLeft != 0) {
+      ui.offsetLeft = 0;
+      this.setData({ ui: ui, page: page })
+    }
+  },
+  gotoMyself(e) {
+    let { ui } = this.data;
+    let title = "我";
+    let viewPage = 'myself';
+    let { page } = this.data;
+    page.title = title;
+    page.viewPage = viewPage;
+    if (ui.offsetLeft != 0) {
+      ui.offsetLeft = 0;
+      this.setData({ ui: ui, page: page })
+    }
+  },
+  gotoYouAndMe(e) {
+    let { ui } = this.data;
+    let title = "我和她";
+    let viewPage = 'youAndMe';
+    let { page } = this.data;
+    page.title = title;
+    page.viewPage = viewPage;
+    if (ui.offsetLeft != 0) {
+      ui.offsetLeft = 0;
+      this.setData({ ui: ui, page: page })
     }
   }
 })

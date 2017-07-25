@@ -1,32 +1,95 @@
 <view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">
-  <scroll-view bindscroll="handlerScroll" scroll-y style="height: 100%;">
+  <view style="height: 100%;" wx:if="{{page.viewPage == 'index'}}">
     <view class="search">
       <view catchtap="handlerAvatarTap" class="avatar">
         <image src="../../imgs/ic_face.png"></image>
       </view>
+      <view class="title">{{page.title}}</view>
+      <view class="avatarLeft">
+      </view>
     </view>
     <view class="heightArea"></view>
-    <view wx:for="123333" wx:key="unique" class="item">
+    <!--<view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'index'}}">
+      <image src="../../imgs/ic_face.png"></image>
+    </view>-->
+    <view class="mainContent">
+      <view class="distanceView">
+        <view class="distanceText">距离:</view>
+        <view class="distanceProcess">
+          <progress percent="80" active />
+        </view>
+      </view>
+      <view class="demandInfo">
+        <!--<view class="demandHead">
+        </view>-->
+        <view class="photoInfo">
+          <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
+            <block wx:for="{{banners}}" wx:key="id">
+              <swiper-item>
+                <image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}"/>
+              </swiper-item>
+            </block>
+          </swiper>
+        </view>
+        <view class="needInfo">
+          我想要：
+        </view>
+        <view class="tapInfo">
+          <text class="tapText">标签：</text>
+          <view class="tapView">
+            <block wx:for="{{[1,2,3,4]}}">
+              <view class="tapName">开朗</view>
+            </block>
+          </view>
+        </view>
+        <view class="interestInfo">
+          兴趣：
+        </view>
+        <view class="addressInfo">
+          地址：
+        </view>
+      </view>
+      <view class="demandInfo2">
+      
+      </view>
+      <view class="getDemand">
+        <view class="meetText">赏</view>
+      </view>
+    </view>
+  </view>
+  <scroll-view scroll-y style="height: 100%;" wx:else>
+    <view class="search">
+      <view catchtap="handlerAvatarTap" class="avatar">
+        <image src="../../imgs/ic_face.png"></image>
+      </view>
+      <view class="title">{{page.title}}</view>
+      <view class="avatarLeft">
+      </view>
+    </view>
+    <view class="heightArea"></view>
+    <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'myself'}}">
+      <text>我</text>
+      <image src="../../imgs/ic_face.png"></image>
+    </view>
+    <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'youAndMe'}}">
+      <text>我和她</text>
       <image src="../../imgs/ic_face.png"></image>
     </view>
   </scroll-view>
 </view>
 <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
-   <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
-     <view class="user-face-wrapper">
-       <image class="user-face" src="../../imgs/ic_face.png"></image>
-     </view>
-     <!--<view wx:for="1234" wx:key="unique" class="one-menu">
-        <text>新年大吉</text>
-     </view>-->
-     <view class="one-menu">
-        <text>她</text>
-     </view>
-     <view class="one-menu">
-        <text>我</text>
-     </view>
-     <view class="one-menu">
-        <text>我和她</text>
-     </view>
-   </view>
+    <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
+      <view class="user-face-wrapper">
+        <image class="user-face" src="../../imgs/ic_face.png"></image>
+      </view>
+      <view class="one-menu" catchtap="gotoIndex">
+          <text>她</text>
+      </view>
+      <view class="one-menu" catchtap="gotoMyself">
+          <text>我</text>
+      </view>
+      <view class="one-menu" catchtap="gotoYouAndMe">
+          <text>我和她</text>
+      </view>
+    </view>
 </view>
