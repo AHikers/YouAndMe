@@ -13,40 +13,20 @@
       <image src="../../imgs/ic_face.png"></image>
     </view>-->
     <view class="mainContent">
-      <view class="distanceView">
-        <view class="distanceText">距离:</view>
-        <view class="distanceProcess">
-          <progress percent="80" active />
-        </view>
-      </view>
       <view class="demandInfo">
         <!--<view class="demandHead">
         </view>-->
-        <view class="photoInfo">
-          <swiper class="banner" indicator-dots="true" autoplay="true" interval="3000" duration="500">
-            <block wx:for="{{banners}}" wx:key="id">
-              <swiper-item>
-                <image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}"/>
-              </swiper-item>
-            </block>
-          </swiper>
+        <view class="distance">
         </view>
-        <view class="needInfo">
-          我想要：
+        <view class="popularity">
         </view>
-        <view class="tapInfo">
-          <text class="tapText">标签：</text>
-          <view class="tapView">
-            <block wx:for="{{[1,2,3,4]}}">
-              <view class="tapName">开朗</view>
-            </block>
-          </view>
+        <view class="selfPic">
         </view>
-        <view class="interestInfo">
-          兴趣：
+        <view class="tagOne">
         </view>
-        <view class="addressInfo">
-          地址：
+        <view class="tagTwo">
+        </view>
+        <view class="textArea">
         </view>
       </view>
       <view class="demandInfo2">

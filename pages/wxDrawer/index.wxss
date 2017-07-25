@@ -69,22 +69,87 @@
   line-height: 60rpx;
 }
 .demandInfo {
-  height: 80%;
-  width: 90%;
+  height: 86%;
+  width: 100%;
   background-color: #dbdbdb;
   position: absolute;
-  top: 180rpx;
-  left: 38rpx;
+  top: 110rpx;
+  left: 0rpx;
   z-index: 2;
+  background-image: url(../../imgs/mainBg.png);
+  background-size: 100% 100%;
 }
-.demandInfo2 {
-  height: 80%;
-  width: 90%;
+.demandInfo .distance {
+  position: relative;
+  top: 35rpx;
+  left: 40rpx;
+  font-size: 30rpx;
+  color: black;
+  width: 120rpx;
+  height: 120rpx;
   background-color: orange;
+}
+.demandInfo .popularity {
+  position: relative;
+  top: -8%;
+  left: 23%;
+  font-size: 30rpx;
+  color: black;
+  width:60%;
+  height: 40rpx;
+  background-color: yellow;
+}
+.demandInfo .selfPic {
+  background-color: rosybrown;
+  background-size: 100% 100%;
+  position: relative;
+  top: -1%;
+  left: 20%;
+  width: 71.5%;
+  height: 48%;
+  z-index: -66;
+}
+.demandInfo .tagOne {
+  background-image: url(../../imgs/tagbg.png);
+  background-size: 100% 100%;
+  position: relative;
+  top: 19%;
+  left: 50rpx;
+  width: 150rpx;
+  height: 50rpx;
+  z-index: 4;
+}
+.demandInfo .tagTwo {
+  background-image: url(../../imgs/tagbg.png);
+  background-size: 100% 100%;
+  position: relative;
+  top: 22%;
+  left: 50rpx;
+  width: 150rpx;
+  height: 50rpx;
+  z-index: 4;
+}
+.demandInfo .textArea {
+  background-image: url(../../imgs/textBg.png);
+  background-size: 100% 100%;
+  position: relative;
+  top: -10%;
+  left: 20%;
+  width: 71.5%;
+  height: 35%;
+  z-index: 3;
+}
+
+.demandInfo2 {
+  height: 86%;
+  width: 100%;
+  background-color: #dbdbdb;
   position: absolute;
-  top: 180rpx;
-  left: 38rpx;
+  top: 110rpx;
+  left: 0rpx;
   z-index: 1;
+  background-image: url(../../imgs/mainBg.png);
+  background-size: 100% 100%;
 }
 /*.demandHead {
   height: 140rpx;
@@ -157,20 +222,20 @@
 }
 .getDemand {
   position: absolute;
-  bottom: 0rpx;
-  left: 38%;
-  height: 160rpx;
-  width: 160rpx;
-  border-radius: 80rpx;
+  bottom: 10rpx;
+  left: 20%;
+  height: 80rpx;
+  width: 60%;
+  border-radius: 20rpx;
   background-color: orangered;
   z-index: 1000;
 }
 .meetText {
   text-align: center;
-  line-height: 160rpx;
+  line-height: 80rpx;
   font-size: 50rpx;
   color: white;
-  width: 160rpx;
+  width: 100%;
 }
 
 .item {
