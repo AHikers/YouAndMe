@@ -17,17 +17,31 @@
         <!--<view class="demandHead">
         </view>-->
         <view class="distance">
+          <view class="distanceText">
+            距离
+          </view>
+          <view class="distanceNum">
+            500m
+          </view>
         </view>
-        <view class="popularity">
+        <!--<view class="popularity">
+        </view>-->
+        <view class="demandName">
+          <view class="age">
+            <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
+            <view class="ageNum">20</view>
+          </view>
+          <view class="jod"></view>
         </view>
-        <view class="selfPic">
+        <view class="selfPicArea">
+          <image src="../../imgs/banner1.jpg" class="selfPic"></image>>
         </view>
         <view class="tagOne">
         </view>
         <view class="tagTwo">
         </view>
-        <view class="textArea">
-        </view>
+        <!--<view class="textArea">
+        </view>-->
       </view>
       <view class="demandInfo2">
       
