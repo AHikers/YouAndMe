@@ -31,14 +31,23 @@
             <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
             <view class="ageNum">20</view>
           </view>
-          <view class="jod"></view>
+          <view class="constellation">
+            <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
+            <view class="consteName">摩羯座</view>
+          </view>
+          <view class="jod">
+            <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
+            <view class="consteName">艺术/美工</view>
+          </view>
         </view>
         <view class="selfPicArea">
           <image src="../../imgs/banner1.jpg" class="selfPic"></image>>
         </view>
         <view class="tagOne">
+          <view class="tagText">我要</view>
         </view>
         <view class="tagTwo">
+          <view class="tagText">寄语</view>
         </view>
         <!--<view class="textArea">
         </view>-->

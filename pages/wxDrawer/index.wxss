@@ -109,16 +109,16 @@
   top: 11%;
   left: 29%;
   color: black;
-  width:55%;
+  width:58%;
   height: 38rpx;
-  background-color: silver;
 }
 .demandName .age {
   height: 100%;
-  width: 100rpx;
+  width: 80rpx;
   background-color: pink;
   border-radius: 10rpx;
   margin-left: 10rpx;
+  float: left;
 }
 .demandName .age .sexIcon {
   height: 100%;
@@ -130,6 +130,49 @@
   width: 30rpx;
   color: white;
   float: left;
+  font-size: 30rpx;
+}
+.demandName .constellation {
+  height: 100%;
+  width: 130rpx;
+  background-color: royalblue;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+.demandName .constellation .consteIcon {
+  height: 100%;
+  width: 30rpx;
+  float: left
+}
+.demandName .constellation .consteName {
+  height: 100%;
+  width: 100rpx;
+  color: white;
+  float: left;
+  font-size: 26rpx;
+  line-height: 38rpx;
+}
+.demandName .jod {
+  height: 100%;
+  width: 180rpx;
+  background-color: rosybrown;
+  border-radius: 10rpx;
+  margin-left: 10rpx;
+  float: left;
+}
+.demandName .jod .consteIcon {
+  height: 100%;
+  width: 30rpx;
+  float: left
+}
+.demandName .jod .consteName {
+  height: 100%;
+  width: 150rpx;
+  color: white;
+  float: left;
+  font-size: 26rpx;
+  line-height: 38rpx;
 }
 .demandInfo .selfPicArea {
   background-color: rosybrown;
@@ -163,6 +206,12 @@
   width: 150rpx;
   height: 50rpx;
   z-index: 4;
+}
+.tagText{
+  font-size: 30rpx;
+  font-weight: 800;
+  margin-left: 30rpx;
+  line-height: 50rpx;
 }
 .demandInfo .textArea {
   background-image: url(../../imgs/textBg.png);
