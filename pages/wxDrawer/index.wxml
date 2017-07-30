@@ -49,14 +49,20 @@
         <view class="tagTwo">
           <view class="tagText">寄语</view>
         </view>
-        <!--<view class="textArea">
-        </view>-->
+        <view class="textArea">
+          <view class="need">
+            三杯奶茶
+          </view>
+          <view class="message">
+            本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈
+          </view>
+        </view>
       </view>
       <view class="demandInfo2">
       
       </view>
       <view class="getDemand">
-        <view class="meetText">赏</view>
+        <view class="meetText">翻她牌</view>
       </view>
     </view>
   </view>
