@@ -1,3 +1,7 @@
+swiper {
+  display: block;
+  height: 100%;
+}
 .mpage {
   z-index: 10;
   position: fixed;
@@ -61,7 +65,7 @@
   width: 100%;
   background-color: #dbdbdb;
   position: absolute;
-  top: 110rpx;
+  top: 0rpx;
   left: 0rpx;
   z-index: 1;
   background-image: url(../../imgs/mainBg.png);
@@ -250,7 +254,7 @@
   width: 100%;
   background-color: #dbdbdb;
   position: absolute;
-  top: 110rpx;
+  top: 0rpx;
   left: 0rpx;
   z-index: 0;
   background-image: url(../../imgs/mainBg.png);

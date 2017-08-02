@@ -13,54 +13,63 @@
       <image src="../../imgs/ic_face.png"></image>
     </view>-->
     <view class="mainContent">
-      <view class="demandInfo">
-        <!--<view class="demandHead">
-        </view>-->
-        <view class="distance">
-          <view class="distanceText">
-            距离
+      <swiper class="" indicator-dots="true" autoplay="" interval="" duration="500">
+      <block wx:for="{{userList}}">
+        <swiper-item>
+          <view class="demandInfo">
+            <!--<view class="demandHead">
+            </view>-->
+            <view class="distance">
+              <view class="distanceText">
+                距离
+              </view>
+              <view class="distanceNum">
+                {{item.distance}} km
+              </view>
+            </view>
+            <!--<view class="popularity">
+            </view>-->
+            <view class="demandName">
+              <view class="age">
+                <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
+                <view class="ageNum">{{item.age}}</view>
+              </view>
+              <view class="constellation">
+                <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
+                <view class="consteName">{{item.constellation}}</view>
+              </view>
+              <view class="jod">
+                <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
+                <view class="consteName">{{item.job}}</view>
+              </view>
+            </view>
+            <view class="selfPicArea">
+              <image src="{{item.pictrueUrl}}" class="selfPic"></image>>
+            </view>
+            <view class="tagOne">
+              <view class="tagText">我要</view>
+            </view>
+            <view class="tagTwo">
+              <view class="tagText">寄语</view>
+            </view>
+            <view class="textArea">
+              <view class="need">
+                {{item.want}}
+              </view>
+              <view class="message">
+                {{item.giveMessage}}
+              </view>
+            </view>
           </view>
-          <view class="distanceNum">
-            500m
-          </view>
-        </view>
-        <!--<view class="popularity">
-        </view>-->
-        <view class="demandName">
-          <view class="age">
-            <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
-            <view class="ageNum">20</view>
-          </view>
-          <view class="constellation">
-            <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
-            <view class="consteName">摩羯座</view>
-          </view>
-          <view class="jod">
-            <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
-            <view class="consteName">艺术/美工</view>
-          </view>
-        </view>
-        <view class="selfPicArea">
-          <image src="../../imgs/banner1.jpg" class="selfPic"></image>>
-        </view>
-        <view class="tagOne">
-          <view class="tagText">我要</view>
-        </view>
-        <view class="tagTwo">
-          <view class="tagText">寄语</view>
-        </view>
-        <view class="textArea">
-          <view class="need">
-            三杯奶茶
-          </view>
-          <view class="message">
-            本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈
-          </view>
-        </view>
-      </view>
-      <view class="demandInfo2">
+        </swiper-item>
+        </block>
+        <swiper-item>
+          <view class="demandInfo2">
       
-      </view>
+          </view>
+        </swiper-item>
+      </swiper>
+      
       <view class="getDemand">
         <view class="meetText">翻她牌</view>
       </view>
@@ -76,9 +85,11 @@
       </view>
     </view>
     <view class="heightArea"></view>
-    <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'myself'}}">
-      <text>我</text>
-      <image src="../../imgs/ic_face.png"></image>
+    <view class="classname">
+      <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'myself'}}">
+        <text>我</text>
+        <image src="../../imgs/ic_face.png"></image>
+      </view>
     </view>
     <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'youAndMe'}}">
       <text>我和她</text>

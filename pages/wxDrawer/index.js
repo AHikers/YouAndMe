@@ -16,25 +16,26 @@ Page({
       title: '她',
       viewPage: 'index'
     },
-    banners: [
+    userList: [
       {
-        id: 3,
-        img: '../../imgs/banner1.jpg',
-        url: '',
-        name: '头像'
+        sex: 0,
+        age: 20,
+        constellation: "摩羯座",
+        job: "艺术/美工",
+        distance: 0.5,
+        pictrueUrl: "../../imgs/user1.jpg",
+        want: "三杯奶茶",
+        giveMessage: "本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈"
+      }, {
+        sex: 1,
+        age: 30,
+        constellation: "摩羯座",
+        job: "IT/前端",
+        distance: 1.6,
+        pictrueUrl: "../../imgs/user2.jpg",
+        want: "写个软件",
+        giveMessage: "性格暴躁、易怒、死宅"
       },
-      {
-        id: 1,
-        img: 'http://wxapp.im20.com.cn/impublic/waimai/imgs/index/banner_1.jpg',
-        url: '',
-        name: '告别午高峰'
-      },
-      {
-        id: 2,
-        img: 'http://wxapp.im20.com.cn/impublic/waimai/imgs/index/banner_2.jpg',
-        url: '',
-        name: '金牌好店'
-      }
     ],
   },
   onLoad() {
@@ -140,7 +141,7 @@ Page({
       this.setData({ ui: ui, page: page })
     }
   },
-  gotoYouAndMe(e) {
+  /*gotoYouAndMe(e) {
     let { ui } = this.data;
     let title = "我和她";
     let viewPage = 'youAndMe';
@@ -151,5 +152,5 @@ Page({
       ui.offsetLeft = 0;
       this.setData({ ui: ui, page: page })
     }
-  }
+  }*/
 })
