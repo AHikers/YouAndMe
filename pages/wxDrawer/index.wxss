@@ -13,6 +13,9 @@ swiper {
   background-color: white;
   width: 100%;
   height: 100%;
+  position: absolute;
+  top: 110rpx;
+  left: 0rpx;
 }
 .withAnimate {
   transition: all 300ms ease;
@@ -118,16 +121,21 @@ swiper {
 }
 .demandName .age {
   height: 100%;
-  width: 80rpx;
+  width: auto;
   background-color: pink;
   border-radius: 10rpx;
   margin-left: 10rpx;
   float: left;
+  padding: 0 10rpx;
 }
-.demandName .age .sexIcon {
+.demandName .age .sexImage {
   height: 100%;
   width: 30rpx;
-  float: left
+  float: left;
+}
+.sexImage .sexIcon {
+  height: 80%;
+  width: 100%;
 }
 .demandName .age .ageNum {
   height: 100%;
@@ -138,20 +146,16 @@ swiper {
 }
 .demandName .constellation {
   height: 100%;
-  width: 130rpx;
+  width: auto;
   background-color: royalblue;
   border-radius: 10rpx;
   margin-left: 10rpx;
   float: left;
-}
-.demandName .constellation .consteIcon {
-  height: 100%;
-  width: 30rpx;
-  float: left
+  padding: 0 10rpx;
 }
 .demandName .constellation .consteName {
   height: 100%;
-  width: 100rpx;
+  width: 100%;
   color: white;
   float: left;
   font-size: 26rpx;
@@ -159,20 +163,16 @@ swiper {
 }
 .demandName .jod {
   height: 100%;
-  width: 180rpx;
+  width: auto;
   background-color: rosybrown;
   border-radius: 10rpx;
   margin-left: 10rpx;
   float: left;
-}
-.demandName .jod .consteIcon {
-  height: 100%;
-  width: 30rpx;
-  float: left
+  padding: 0 10rpx;
 }
 .demandName .jod .consteName {
   height: 100%;
-  width: 150rpx;
+  width: 100%;
   color: white;
   float: left;
   font-size: 26rpx;
@@ -331,7 +331,7 @@ swiper {
 }
 .getDemand {
   position: absolute;
-  bottom: 10rpx;
+  bottom: 120rpx;
   left: 20%;
   height: 80rpx;
   width: 60%;
@@ -347,20 +347,12 @@ swiper {
   width: 100%;
 }
 
-.item {
+.userInfo {
   display: flex;
-  align-items: center;
-  justify-content: center;
   background: white;
   margin: 0 40rpx;
   margin-bottom: 20rpx;
-  height: 700rpx;
-  background-repeat: no-repeat;
-  background-size: 100%
-}
-.item image {
-  height: 150rpx;
-  width: 150rpx;
+  height: 100%;
 }
 .user {
   position: fixed;

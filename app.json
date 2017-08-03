@@ -1,7 +1,7 @@
 {
   "pages":[
     "pages/wxDrawer/index",
-    "page/mine/mine"
+    "pages/mine/mine"
   ],
   "window":{
     "backgroundTextStyle":"light",

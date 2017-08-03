@@ -13,15 +13,17 @@ Page({
       tStart: true
     },
     page: {
-      title: '她',
-      viewPage: 'index'
+      z_index_user: 20,
+      z_index_myInfo: 10,
+      z_index_getBrand: 10,
+      title: "她"
     },
     userList: [
       {
         sex: 0,
         age: 20,
         constellation: "摩羯座",
-        job: "艺术/美工",
+        job: "学生",
         distance: 0.5,
         pictrueUrl: "../../imgs/user1.jpg",
         want: "三杯奶茶",
@@ -30,7 +32,7 @@ Page({
         sex: 1,
         age: 30,
         constellation: "摩羯座",
-        job: "IT/前端",
+        job: "前端开发工程师",
         distance: 1.6,
         pictrueUrl: "../../imgs/user2.jpg",
         want: "写个软件",
@@ -119,38 +121,41 @@ Page({
   },
   gotoIndex(e) {
     let { ui } = this.data;
+    let { page } = this.data;
     let title = "她";
-    let viewPage = 'index';
-    let { page } = this.data;
+    page.z_index_user = 20; 
+    page.z_index_myInfo = 10,
+    page.z_index_getBrand = 10;
     page.title = title;
-    page.viewPage = viewPage;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;
       this.setData({ ui: ui, page: page })
     }
   },
-  gotoMyself(e) {
+  gotoMyInfo(e) {
     let { ui } = this.data;
-    let title = "我";
-    let viewPage = 'myself';
     let { page } = this.data;
+    let title = "我的信息";
+    page.z_index_user = 10;
+    page.z_index_myInfo = 20,
+    page.z_index_getBrand = 10;
     page.title = title;
-    page.viewPage = viewPage;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;
       this.setData({ ui: ui, page: page })
     }
   },
-  /*gotoYouAndMe(e) {
+  gotoMyBrand(e) {
     let { ui } = this.data;
-    let title = "我和她";
-    let viewPage = 'youAndMe';
     let { page } = this.data;
+    let title = "我送的牌子";
+    page.z_index_user = 10;
+    page.z_index_myInfo = 10,
+    page.z_index_getBrand = 20;
     page.title = title;
-    page.viewPage = viewPage;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;
       this.setData({ ui: ui, page: page })
     }
-  }*/
+  }
 })

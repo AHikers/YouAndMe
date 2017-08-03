@@ -1,5 +1,6 @@
-<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">
-  <view style="height: 100%;" wx:if="{{page.viewPage == 'index'}}">
+<!--<view class="mpage {{!ui.tStart? 'withAnimate': ''}}" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" bindtap="handlerPageTap">-->
+<view class="mpage withAnimate" style="left:{{ui.offsetLeft}}px;width: {{ui.windowWidth}}px" bindtap="handlerPageTap">
+  <view style="height: 100%;">
     <view class="search">
       <view catchtap="handlerAvatarTap" class="avatar">
         <image src="../../imgs/ic_face.png"></image>
@@ -12,56 +13,56 @@
     <!--<view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'index'}}">
       <image src="../../imgs/ic_face.png"></image>
     </view>-->
-    <view class="mainContent">
+    <view class="mainContent" style="z-index: {{page.z_index_user}}">
       <swiper class="" indicator-dots="true" autoplay="" interval="" duration="500">
-      <block wx:for="{{userList}}">
-        <swiper-item>
-          <view class="demandInfo">
-            <!--<view class="demandHead">
-            </view>-->
-            <view class="distance">
-              <view class="distanceText">
-                距离
+        <block wx:for="{{userList}}">
+          <swiper-item>
+            <view class="demandInfo">
+              <!--<view class="demandHead">
+              </view>-->
+              <view class="distance">
+                <view class="distanceText">
+                  距离
+                </view>
+                <view class="distanceNum">
+                  {{item.distance}} km
+                </view>
               </view>
-              <view class="distanceNum">
-                {{item.distance}} km
+              <!--<view class="popularity">
+              </view>-->
+              <view class="demandName">
+                <view class="age">
+                  <view class="sexImage">
+                    <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
+                  </view>
+                  <view class="ageNum">{{item.age}}</view>
+                </view>
+                <view class="constellation">
+                  <view class="consteName">{{item.constellation}}</view>
+                </view>
+                <view class="jod">
+                  <view class="consteName">{{item.job}}</view>
+                </view>
+              </view>
+              <view class="selfPicArea">
+                <image src="{{item.pictrueUrl}}" class="selfPic"></image>>
+              </view>
+              <view class="tagOne">
+                <view class="tagText">我要</view>
+              </view>
+              <view class="tagTwo">
+                <view class="tagText">寄语</view>
+              </view>
+              <view class="textArea">
+                <view class="need">
+                  {{item.want}}
+                </view>
+                <view class="message">
+                  {{item.giveMessage}}
+                </view>
               </view>
             </view>
-            <!--<view class="popularity">
-            </view>-->
-            <view class="demandName">
-              <view class="age">
-                <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
-                <view class="ageNum">{{item.age}}</view>
-              </view>
-              <view class="constellation">
-                <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
-                <view class="consteName">{{item.constellation}}</view>
-              </view>
-              <view class="jod">
-                <image src="../../imgs/sexIcon.png" class="consteIcon"></image>
-                <view class="consteName">{{item.job}}</view>
-              </view>
-            </view>
-            <view class="selfPicArea">
-              <image src="{{item.pictrueUrl}}" class="selfPic"></image>>
-            </view>
-            <view class="tagOne">
-              <view class="tagText">我要</view>
-            </view>
-            <view class="tagTwo">
-              <view class="tagText">寄语</view>
-            </view>
-            <view class="textArea">
-              <view class="need">
-                {{item.want}}
-              </view>
-              <view class="message">
-                {{item.giveMessage}}
-              </view>
-            </view>
-          </view>
-        </swiper-item>
+          </swiper-item>
         </block>
         <swiper-item>
           <view class="demandInfo2">
@@ -71,31 +72,30 @@
       </swiper>
       
       <view class="getDemand">
-        <view class="meetText">翻她牌</view>
+        <view class="meetText">翻 牌</view>
       </view>
+    </view>
+    <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
+      <scroll-view scroll-y style="height: 100%;" >
+        <view class="userInfo">
+          <view class="basicInfo">
+            <text>基本信息</text>
+          </view>
+          <view class="otherInfo">
+            <text>其他</text>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="mainContent" style="z-index: {{page.z_index_getBrand}}">
+      <scroll-view scroll-y style="height: 100%;" >
+        <view wx:for="12" wx:key="unique" class="item">
+          <text>我和她</text>
+          <image src="../../imgs/ic_face.png"></image>
+        </view>
+      </scroll-view>
     </view>
   </view>
-  <scroll-view scroll-y style="height: 100%;" wx:else>
-    <view class="search">
-      <view catchtap="handlerAvatarTap" class="avatar">
-        <image src="../../imgs/ic_face.png"></image>
-      </view>
-      <view class="title">{{page.title}}</view>
-      <view class="avatarLeft">
-      </view>
-    </view>
-    <view class="heightArea"></view>
-    <view class="classname">
-      <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'myself'}}">
-        <text>我</text>
-        <image src="../../imgs/ic_face.png"></image>
-      </view>
-    </view>
-    <view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'youAndMe'}}">
-      <text>我和她</text>
-      <image src="../../imgs/ic_face.png"></image>
-    </view>
-  </scroll-view>
 </view>
 <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
     <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
@@ -105,11 +105,11 @@
       <view class="one-menu" catchtap="gotoIndex">
           <text>她</text>
       </view>
-      <view class="one-menu" catchtap="gotoMyself">
-          <text>我</text>
+      <view class="one-menu" catchtap="gotoMyInfo">
+          <text>我的信息</text>
       </view>
-      <view class="one-menu" catchtap="gotoYouAndMe">
-          <text>我和她</text>
+      <view class="one-menu" catchtap="gotoMyBrand">
+          <text>我送的牌子</text>
       </view>
     </view>
 </view>
