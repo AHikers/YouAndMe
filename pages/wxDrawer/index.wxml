@@ -78,10 +78,13 @@
     <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
       <scroll-view scroll-y style="height: 100%;" >
         <view class="userInfo">
-          <view class="basicInfo">
+          <view class="picInfo">
+            <text>相片</text>
+          </view>
+          <view class="infoItem">
             <text>基本信息</text>
           </view>
-          <view class="otherInfo">
+          <view class="infoItem">
             <text>其他</text>
           </view>
         </view>

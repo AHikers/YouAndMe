@@ -18,27 +18,7 @@ Page({
       z_index_getBrand: 10,
       title: "她"
     },
-    userList: [
-      {
-        sex: 0,
-        age: 20,
-        constellation: "摩羯座",
-        job: "学生",
-        distance: 0.5,
-        pictrueUrl: "../../imgs/user1.jpg",
-        want: "三杯奶茶",
-        giveMessage: "本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈"
-      }, {
-        sex: 1,
-        age: 30,
-        constellation: "摩羯座",
-        job: "前端开发工程师",
-        distance: 1.6,
-        pictrueUrl: "../../imgs/user2.jpg",
-        want: "写个软件",
-        giveMessage: "性格暴躁、易怒、死宅"
-      },
-    ],
+    userList: [],
   },
   onLoad() {
     try {
@@ -48,9 +28,11 @@ Page({
       this.data.ui.offsetLeft = 0;
       this.data.ui.windowWidth = res.windowWidth;
       this.setData({ui: this.data.ui})
+      this.getUserList();
     } catch (e) {
     }
   },
+  /*
   handlerStart(e) {
     let {clientX, clientY} = e.touches[0];
     this.tapStartX = clientX;
@@ -104,6 +86,30 @@ Page({
       }
     }
     this.setData({ui: ui})
+  },
+  */
+  getUserList(e) {
+    let url = "http://139.224.238.47:9090/card/cardsList.go";
+    let self = this;
+    wx.request({
+      url: url,
+      data: {},
+      header: {
+        'content-type': 'application/json'
+      },
+      success: function (res) {
+        console.log(res);
+        if (res.data.code == "1"){
+          self.setData({userList: res.data.userList});
+        } else {
+          wx.showToast({
+            title: '加载失败',
+            duration: 2000
+          });
+        }
+      }
+    });
+    console.log("sss");
   },
   handlerPageTap(e) {
     let {ui} = this.data;

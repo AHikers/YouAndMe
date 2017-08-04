@@ -347,13 +347,6 @@ swiper {
   width: 100%;
 }
 
-.userInfo {
-  display: flex;
-  background: white;
-  margin: 0 40rpx;
-  margin-bottom: 20rpx;
-  height: 100%;
-}
 .user {
   position: fixed;
   top: 0;
@@ -390,4 +383,21 @@ swiper {
   background: lightgray;
   color: white;
   font-size: 38rpx;
+}
+.userInfo {
+  background: white;
+  height: auto;
+  width: 100%;
+}
+.userInfo .infoItem {
+  width: 90%;
+  margin: 0 auto;
+  height: 100rpx;
+  border-bottom: 4rpx solid #dbdbdb;
+}
+.userInfo .picInfo {
+  width: 90%;
+  margin: 0 auto;
+  height: 200rpx;
+  border-bottom: 4rpx solid #dbdbdb;
 }
