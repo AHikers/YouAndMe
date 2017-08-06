@@ -79,13 +79,44 @@
       <scroll-view scroll-y style="height: 100%;" >
         <view class="userInfo">
           <view class="picInfo">
-            <text>相片</text>
+            <image src="../../imgs/uploadImg.png" class="uploadImg"></image>
+            <view class="userName">
+              <text class="textStyle">姓名</text>
+              <input class="inputStyle" placeholder="请输入您的姓名" />
+            </view>
           </view>
           <view class="infoItem">
-            <text>基本信息</text>
+            <text class="textTitle">基本信息</text>
+            <view class="infoBox">
+              <text class="textStyle">性别</text>
+              <view class="sexRadio">
+                <radio-group class="group">
+                  <label for="radioMan">
+                    <radio value="男" checked="true" id="radioMan" />男
+                  </label>
+                  <label for="radioWoman">
+                    <radio value="女" checked="false" id="radioWoman" />女
+                  </label>
+                </radio-group>
+              </view>
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">生日</text>
+              <view class="birthView">
+                <picker mode="date" value="生日" start="2015-09-01" end="2017-09-01">
+                  <view class="pickerDate">
+                    {{}}
+                  </view>
+                </picker>
+              </view>
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">职业</text>
+              <input class="inputStyle" placeholder="请输入您的职业" />
+            </view>
           </view>
           <view class="infoItem">
-            <text>其他</text>
+            <text class="textTitle">其他</text>
           </view>
         </view>
       </scroll-view>
@@ -106,13 +137,16 @@
         <image class="user-face" src="../../imgs/ic_face.png"></image>
       </view>
       <view class="one-menu" catchtap="gotoIndex">
-          <text>她</text>
+          <text>她的信息</text>
       </view>
       <view class="one-menu" catchtap="gotoMyInfo">
           <text>我的信息</text>
       </view>
       <view class="one-menu" catchtap="gotoMyBrand">
-          <text>我送的牌子</text>
+          <text>牌子列表</text>
+      </view>
+      <view class="one-menu" catchtap="gotoMyBrand">
+          <text>设置</text>
       </view>
     </view>
 </view>

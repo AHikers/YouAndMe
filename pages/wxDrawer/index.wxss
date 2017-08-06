@@ -392,12 +392,48 @@ swiper {
 .userInfo .infoItem {
   width: 90%;
   margin: 0 auto;
-  height: 100rpx;
+  height: auto;
   border-bottom: 4rpx solid #dbdbdb;
+  padding: 20rpx 0;
 }
 .userInfo .picInfo {
   width: 90%;
   margin: 0 auto;
   height: 200rpx;
   border-bottom: 4rpx solid #dbdbdb;
+}
+.picInfo .uploadImg {
+  height: 100%;
+  width: 200rpx;
+  float: left;
+}
+.userInfo .userName {
+  padding: 20rpx 0;
+}
+.textStyle {
+  font-size: 26repx;
+  text-align: left;
+  padding-left: 10rpx;
+}
+.inputStyle {
+  border-bottom: 2rpx solid #dbdbdb;
+  padding: 10rpx;
+} 
+.textTitle {
+  color: tomato;
+  font-size: 24rpx;
+  display: block;
+  margin-bottom: 20rpx;
+}
+.sexRadio {
+  margin: 20rpx 0;
+}
+.birthView {
+  width: 100%;
+  height: 40rpx;
+}
+.pickerDate {
+  width: 100%;
+  height: 40rpx;
+  border-bottom: 2rpx solid #dbdbdb;
 }
