@@ -16,6 +16,7 @@ Page({
       z_index_user: 20,
       z_index_myInfo: 10,
       z_index_getBrand: 10,
+      z_index_setInfo: 10,
       title: "她"
     },
     userList: [],
@@ -132,6 +133,7 @@ Page({
     page.z_index_user = 20; 
     page.z_index_myInfo = 10,
     page.z_index_getBrand = 10;
+    page.z_index_setInfo = 10;
     page.title = title;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;
@@ -145,6 +147,7 @@ Page({
     page.z_index_user = 10;
     page.z_index_myInfo = 20,
     page.z_index_getBrand = 10;
+    page.z_index_setInfo = 10;
     page.title = title;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;
@@ -158,6 +161,21 @@ Page({
     page.z_index_user = 10;
     page.z_index_myInfo = 10,
     page.z_index_getBrand = 20;
+    page.z_index_setInfo = 10;
+    page.title = title;
+    if (ui.offsetLeft != 0) {
+      ui.offsetLeft = 0;
+      this.setData({ ui: ui, page: page })
+    }
+  },
+  gotoSetInfo(e) {
+    let { ui } = this.data;
+    let { page } = this.data;
+    let title = "设置";
+    page.z_index_user = 10;
+    page.z_index_myInfo = 10,
+    page.z_index_getBrand = 10;
+    page.z_index_setInfo = 20;
     page.title = title;
     if (ui.offsetLeft != 0) {
       ui.offsetLeft = 0;

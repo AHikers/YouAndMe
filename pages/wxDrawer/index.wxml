@@ -48,7 +48,7 @@
                 <image src="{{item.pictrueUrl}}" class="selfPic"></image>>
               </view>
               <view class="tagOne">
-                <view class="tagText">我要</view>
+                <view class="tagText">需要</view>
               </view>
               <view class="tagTwo">
                 <view class="tagText">寄语</view>
@@ -70,7 +70,6 @@
           </view>
         </swiper-item>
       </swiper>
-      
       <view class="getDemand">
         <view class="meetText">翻 牌</view>
       </view>
@@ -117,16 +116,68 @@
           </view>
           <view class="infoItem">
             <text class="textTitle">其他</text>
+            <view class="infoBox">
+              <text class="textStyle">需要的东西</text>
+              <textarea class="textBox" />
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">留言</text>
+              <textarea class="textBox" />
+            </view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="mainContent" style="z-index: {{page.z_index_setInfo}}">
+      <scroll-view scroll-y style="height: 100%;" >
+        <view class="userInfo">
+          <view class="infoItem">
+            <text class="textTitle">向我显示</text>
+            <view class="infoBox">
+              <text class="textStyle">显示性别</text>
+              <view class="sexRadio">
+                <radio-group class="group">
+                  <label for="radioMan">
+                    <radio value="男" checked="true" id="radioMan" />男
+                  </label>
+                  <label for="radioWoman">
+                    <radio value="女" checked="false" id="radioWoman" />女
+                  </label>
+                  <label for="radioAll">
+                    <radio value="不限" checked="false" id="radioAll" />不限
+                  </label>
+                </radio-group>
+              </view>
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">年龄</text>
+              <view class="birthView">
+                <progress percent="40" stroke-width="12" />
+              </view>
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">距离</text>
+              <progress percent="60" stroke-width="12" />
+            </view>
           </view>
         </view>
       </scroll-view>
     </view>
     <view class="mainContent" style="z-index: {{page.z_index_getBrand}}">
       <scroll-view scroll-y style="height: 100%;" >
-        <view wx:for="12" wx:key="unique" class="item">
-          <text>我和她</text>
-          <image src="../../imgs/ic_face.png"></image>
-        </view>
+        <view class="gank-html" bindtap="details">
+          <view class="topBox">
+            <image src="../../imgs/user1.jpg" class="listImg"></image>
+            <view class="leftBox">
+              <view class="shopTitle">红星美凯龙</view>
+              <view class="features">
+                <text class="saleNum">销量999</text>
+              </view>
+              <view class="distance">500米</view>
+              <text class="cheapBox">第二杯半价</text><text class="cheapBox">一元三件</text><text class="cheapBox">任性</text>
+            </view>
+          </view>
+        </view> 
       </scroll-view>
     </view>
   </view>
@@ -145,7 +196,7 @@
       <view class="one-menu" catchtap="gotoMyBrand">
           <text>牌子列表</text>
       </view>
-      <view class="one-menu" catchtap="gotoMyBrand">
+      <view class="one-menu" catchtap="gotoSetInfo">
           <text>设置</text>
       </view>
     </view>

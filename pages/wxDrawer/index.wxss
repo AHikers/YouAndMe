@@ -437,3 +437,76 @@ swiper {
   height: 40rpx;
   border-bottom: 2rpx solid #dbdbdb;
 }
+.infoBox {
+  margin: 50rpx 0;
+}
+.textBox {
+  width: 90%;
+  height: 160rpx;
+  padding: 10rpx;
+  border: 2rpx solid #dbdbdb;
+  margin-top: 10rpx;
+}
+.gank-html{
+    height: 8rem;
+    width: 95%;
+    margin: 0.45rem auto;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #e9faff;
+    position: relative;
+    z-index: auto;
+    color: aqua;
+}
+.topBox {
+  height: 4.5rem;
+}
+.listImg {
+  width: 4rem;
+  height: 4rem;
+  float: left;
+}
+.leftBox {
+  padding-left: 4.5rem;
+}
+.shopTitle {
+  margin-top: 0.5rem;
+  color: #000000;
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-family: "Microsoft YaHei";
+}
+.features {
+  overflow: hidden;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.2rem;
+  font-size: 0.8rem;
+  color: #3f85d6;
+
+}
+.saleNum {
+  color: #000000;
+  font-size: 0.7rem;
+  margin-left: 1rem;
+}
+.distance {
+  position: absolute;
+  top: 1.5rem;
+  right: 0.5rem;
+  overflow: hidden;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: #000000;
+}
+.cheapBox {
+  font-size: 0.7rem;
+  border: 1px solid #3f85d6;
+  color: #3f85d6;
+  border-radius: 0.3rem;
+  width: auto;
+  padding: 0.1rem;
+  margin-left: 0.5rem;
+}
