@@ -165,19 +165,60 @@
     </view>
     <view class="mainContent" style="z-index: {{page.z_index_getBrand}}">
       <scroll-view scroll-y style="height: 100%;" >
-        <view class="gank-html" bindtap="details">
-          <view class="topBox">
-            <image src="../../imgs/user1.jpg" class="listImg"></image>
-            <view class="leftBox">
-              <view class="shopTitle">红星美凯龙</view>
-              <view class="features">
-                <text class="saleNum">销量999</text>
+        <view class="chooseCardType">
+          <view class="sendCard {{cardTypeClass.sendCard}}" bindtap="viewSendCardList">送出</view>
+          <view class="getCard {{cardTypeClass.getCard}}" bindtap="viewGetCardList">收到</view>
+        </view>
+        <view class="classname" wx:if="{{cardTypeShow.sendCard}}">
+          <block wx:for="{{getCardList}}">
+            <view class="gank-html" bindtap="details" wx:if="{{item.type==1}}">
+              <view class="topBox">
+                <image src="{{item.pictrueUrl}}" class="listImg"></image>
+                <view class="leftBox">
+                  <view class="shopTitle">{{item.name}}</view>
+                  <view class="features">
+                    <text class="saleNum">热度</text>
+                  </view>
+                  <view class="distance">{{item.distance}} km</view>
+                  <view class="cheapBox">{{item.age}}</view>
+                  <view class="cheapBox">{{item.constellation}}</view>
+                  <view class="cheapBox">{{item.job}}</view>
+                </view>
               </view>
-              <view class="distance">500米</view>
-              <text class="cheapBox">第二杯半价</text><text class="cheapBox">一元三件</text><text class="cheapBox">任性</text>
-            </view>
-          </view>
-        </view> 
+              <view class="blowBox">
+                <view class="blowRight">
+                  <view class="cheapInfo"><view class="cheapBtnLess">需要</view><text class="cheapTetx">{{item.want}}</text></view> 
+                  <view class="cheapInfo"><view class="cheapBtnFold">留言</view><text class="cheapTetx">{{item.giveMessage}}</text></view> 
+                </view>
+              </view>
+            </view> 
+          </block>
+        </view>
+        <view class="classname" wx:if="{{cardTypeShow.getCard}}">
+          <block wx:for="{{getCardList}}">
+            <view class="gank-html" bindtap="details" wx:if="{{item.type==2}}">
+              <view class="topBox">
+                <image src="{{item.pictrueUrl}}" class="listImg"></image>
+                <view class="leftBox">
+                  <view class="shopTitle">{{item.name}}</view>
+                  <view class="features">
+                    <text class="saleNum">热度</text>
+                  </view>
+                  <view class="distance">{{item.distance}} km</view>
+                  <view class="cheapBox">{{item.age}}</view>
+                  <view class="cheapBox">{{item.constellation}}</view>
+                  <view class="cheapBox">{{item.job}}</view>
+                </view>
+              </view>
+              <view class="blowBox">
+                <view class="blowRight">
+                  <view class="cheapInfo"><view class="cheapBtnLess">需要</view><text class="cheapTetx">{{item.want}}</text></view> 
+                  <view class="cheapInfo"><view class="cheapBtnFold">留言</view><text class="cheapTetx">{{item.giveMessage}}</text></view> 
+                </view>
+              </view>
+            </view> 
+          </block>
+        </view>
       </scroll-view>
     </view>
   </view>

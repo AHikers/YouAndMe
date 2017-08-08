@@ -133,7 +133,7 @@ swiper {
   width: 30rpx;
   float: left;
 }
-.sexImage .sexIcon {
+.sexIcon {
   height: 80%;
   width: 100%;
 }
@@ -509,4 +509,71 @@ swiper {
   width: auto;
   padding: 0.1rem;
   margin-left: 0.5rem;
+  float: left;
+}
+.blowRight {
+  border-top: 0.1rem dotted #aaa;
+  height: 2rem;
+  width: 100%;
+  float: left;
+  margin-right: 0.5rem;
+  padding: 0.3rem 0;
+}
+.cheapInfo {
+    right: 1rem;
+    bottom: 0rem;
+    color: #000000;
+    font-size: 0.8rem;
+    margin: 0.1rem 0;
+}
+.cheapBtnLess {
+  width: auto;
+  height: 0.8rem;
+  border: 1px solid orangered;
+  color: #fff;
+  background-color: orangered;
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  float: left;
+}
+.cheapTetx {
+  font-size: 0.7rem
+}
+.cheapBtnFold {
+  width: auto;
+  height: 0.8rem;
+  border: 1px solid orangered;
+  color: orangered;
+  border-radius: 0.2rem;
+  font-size: 0.7rem;
+  float: left;
+}
+.chooseCardType {
+  width: 100%;
+  height: 70rpx;
+  padding: 5%;
+}
+.chooseCardType .sendCard {
+  border: 2rpx solid #099fde;
+  height: 100%;
+  width: 45%;
+  text-align: center;
+  line-height: 60rpx;
+  float: left;
+}
+.chooseCardType .getCard {
+  border: 2rpx solid wheat;
+  height: 100%;
+  width: 45%;
+  text-align: center;
+  line-height: 60rpx;
+  float: left;
+}
+.cardTypeCoverGet {
+  color: white;
+  background-color: wheat;
+}
+.cardTypeCoverSend {
+  color: white;
+  background-color: #099fde;
 }

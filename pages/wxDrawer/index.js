@@ -19,7 +19,34 @@ Page({
       z_index_setInfo: 10,
       title: "她"
     },
+    cardTypeClass: {getCard:"",sendCard:""},
+    cardTypeShow: { sendCard: true, getCard:false},
     userList: [],
+    getCardList: [{
+      name:"起个名字好难",
+      age:"20",
+      constellation:"摩羯座",
+      distance:"0.5",
+      giveMessage:"本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈",
+      id:1,
+      job:"学生",
+      pictrueUrl:"../../imgs/user2.jpg",
+      sex: "0",
+      want:"三杯奶茶",
+      type: 1,
+    }, {
+      name: "随便起个名字",
+      age: "20",
+      constellation: "摩羯座",
+      distance: "0.5",
+      giveMessage: "本人放荡不羁爱自由，送我的人需谨慎...哈。哈。哈",
+      id: 1,
+      job: "学生",
+      pictrueUrl: "../../imgs/user1.jpg",
+      sex: "0",
+      want: "三杯奶茶",
+      type: 2,
+    }]
   },
   onLoad() {
     try {
@@ -157,7 +184,7 @@ Page({
   gotoMyBrand(e) {
     let { ui } = this.data;
     let { page } = this.data;
-    let title = "我送的牌子";
+    let title = "牌子列表";
     page.z_index_user = 10;
     page.z_index_myInfo = 10,
     page.z_index_getBrand = 20;
@@ -181,5 +208,23 @@ Page({
       ui.offsetLeft = 0;
       this.setData({ ui: ui, page: page })
     }
+  },
+  viewSendCardList(e) {
+    let { cardTypeClass } = this.data;
+    let { cardTypeShow } = this.data;
+    cardTypeClass.getCard = "";
+    cardTypeClass.sendCard = "cardTypeCoverSend";
+    cardTypeShow.sendCard = true;
+    cardTypeShow.getCard = false;
+    this.setData({ cardTypeClass: cardTypeClass, cardTypeShow: cardTypeShow });
+  },
+  viewGetCardList(e) {
+    let { cardTypeClass } = this.data;
+    let { cardTypeShow } = this.data;
+    cardTypeClass.getCard = "cardTypeCoverGet";
+    cardTypeClass.sendCard = "";
+    cardTypeShow.sendCard = false;
+    cardTypeShow.getCard = true;
+    this.setData({ cardTypeClass: cardTypeClass, cardTypeShow: cardTypeShow });
   }
 })
