@@ -500,6 +500,33 @@ swiper {
   margin-top: 0.2rem;
   font-size: 0.7rem;
   color: #000000;
+  padding: 4rpx 10rpx;
+}
+.myCardStatus {
+  position: absolute;
+  top: 0rem;
+  right: 0.5rem;
+  overflow: hidden;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  margin-top: 0.2rem;
+  font-size: 0.7rem;
+  color: #000000;
+  border-radius: 4rpx;
+}
+.send_border {
+  border: 2rpx solid #099fde;
+}
+.get_border {
+  border: 2rpx solid #3f85d6;
+}
+.send_bg {
+  color: white;
+  background-color: #099fde;
+}
+.get_bg {
+  color: white;
+  background-color: #3f85d6;
 }
 .cheapBox {
   font-size: 0.7rem;

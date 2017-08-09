@@ -75,13 +75,13 @@
       </view>
     </view>
     <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
-      <scroll-view scroll-y style="height: 100%;" >
+      <scroll-view scroll-y="true" style="height: 100%;" >
         <view class="userInfo">
           <view class="picInfo">
-            <image src="../../imgs/uploadImg.png" class="uploadImg"></image>
+            <image src="{{userInfo.tempFilePaths}}" class="uploadImg" bindtap="upLoadUserImg"></image>
             <view class="userName">
               <text class="textStyle">姓名</text>
-              <input class="inputStyle" placeholder="请输入您的姓名" />
+              <input class="inputStyle" placeholder="请输入您的姓名" value="{{userInfo.userName}}" />
             </view>
           </view>
           <view class="infoItem">
@@ -125,6 +125,11 @@
               <textarea class="textBox" />
             </view>
           </view>
+          <view class="infoItem">
+            <button type="primary" size="{{}}" loading="{{}}" plain="{{}}"
+        disabled="{{}}" bindtap="primary"> 保存 </button>
+          </view>
+          <view style="width:100%;height:120rpx;"></view>
         </view>
       </scroll-view>
     </view>
@@ -152,12 +157,12 @@
             <view class="infoBox">
               <text class="textStyle">年龄</text>
               <view class="birthView">
-                <progress percent="40" stroke-width="12" />
+                <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="18" max="100" show-value/>
               </view>
             </view>
             <view class="infoBox">
               <text class="textStyle">距离</text>
-              <progress percent="60" stroke-width="12" />
+              <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="0" max="20" show-value/>
             </view>
           </view>
         </view>
@@ -176,8 +181,10 @@
                 <image src="{{item.pictrueUrl}}" class="listImg"></image>
                 <view class="leftBox">
                   <view class="shopTitle">{{item.name}}</view>
+                  <view class="myCardStatus send_bg" wx:if="{{item.status==1}}">已送</view>
+                  <view class="myCardStatus send_border" wx:else>已送出</view>
                   <view class="features">
-                    <text class="saleNum">热度</text>
+                    <text class="saleNum">联系：{{item.contactInfo}}</text>
                   </view>
                   <view class="distance">{{item.distance}} km</view>
                   <view class="cheapBox">{{item.age}}</view>
@@ -201,8 +208,10 @@
                 <image src="{{item.pictrueUrl}}" class="listImg"></image>
                 <view class="leftBox">
                   <view class="shopTitle">{{item.name}}</view>
+                  <view class="myCardStatus get_bg" wx:if="{{item.status==1}}">同意</view>
+                  <view class="myCardStatus get_border" wx:else>已同意</view>
                   <view class="features">
-                    <text class="saleNum">热度</text>
+                    <text class="saleNum">联系：{{item.contactInfo}}</text>
                   </view>
                   <view class="distance">{{item.distance}} km</view>
                   <view class="cheapBox">{{item.age}}</view>
@@ -229,13 +238,13 @@
         <image class="user-face" src="../../imgs/ic_face.png"></image>
       </view>
       <view class="one-menu" catchtap="gotoIndex">
-          <text>她的信息</text>
+          <text>卡片信息</text>
       </view>
       <view class="one-menu" catchtap="gotoMyInfo">
           <text>我的信息</text>
       </view>
       <view class="one-menu" catchtap="gotoMyBrand">
-          <text>牌子列表</text>
+          <text>我的卡片</text>
       </view>
       <view class="one-menu" catchtap="gotoSetInfo">
           <text>设置</text>
