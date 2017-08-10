@@ -74,6 +74,28 @@
         <view class="meetText">翻 牌</view>
       </view>
     </view>
+    <view class="mainContent" style="z-index: {{page.z_index_writeCard}}">
+      <scroll-view scroll-y="true" style="height: 100%;" >
+        <view class="userInfo">
+          <view class="infoItem">
+            <text class="textTitle">其他</text>
+            <view class="infoBox">
+              <text class="textStyle">需要的东西</text>
+              <textarea class="textBox" />
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">留言</text>
+              <textarea class="textBox" />
+            </view>
+          </view>
+          <view class="infoItem">
+            <button type="primary" size="{{}}" loading="{{}}" plain="{{}}"
+        disabled="{{}}" bindtap="primary"> 发布 </button>
+          </view>
+          <view style="width:100%;height:120rpx;"></view>
+        </view>
+      </scroll-view>
+    </view>
     <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
       <scroll-view scroll-y="true" style="height: 100%;" >
         <view class="userInfo">
@@ -113,16 +135,25 @@
               <text class="textStyle">职业</text>
               <input class="inputStyle" placeholder="请输入您的职业" />
             </view>
-          </view>
-          <view class="infoItem">
-            <text class="textTitle">其他</text>
             <view class="infoBox">
-              <text class="textStyle">需要的东西</text>
-              <textarea class="textBox" />
+              <text class="textStyle">学校</text>
+              <input class="inputStyle" placeholder="请选择您的学校" />
             </view>
             <view class="infoBox">
-              <text class="textStyle">留言</text>
-              <textarea class="textBox" />
+              <text class="textStyle">专业</text>
+              <input class="inputStyle" placeholder="请选择您的专业" />
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">手机号</text>
+              <input class="inputStyle" placeholder="请输入您的手机号" />
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">地址</text>
+              <input class="inputStyle" placeholder="请输入您的地址" />
+            </view>
+            <view class="infoBox">
+              <text class="textStyle">兴趣爱好</text>
+              <input class="inputStyle" placeholder="请选择您的兴趣爱好" />
             </view>
           </view>
           <view class="infoItem">
@@ -239,6 +270,9 @@
       </view>
       <view class="one-menu" catchtap="gotoIndex">
           <text>卡片信息</text>
+      </view>
+      <view class="one-menu" catchtap="gotoWriteCard">
+          <text>写卡片</text>
       </view>
       <view class="one-menu" catchtap="gotoMyInfo">
           <text>我的信息</text>
