@@ -13,6 +13,7 @@
     <!--<view wx:for="12" wx:key="unique" class="item" wx:if="{{page.viewPage == 'index'}}">
       <image src="../../imgs/ic_face.png"></image>
     </view>-->
+    <!--所有卡片信息-->
     <view class="mainContent" style="z-index: {{page.z_index_user}}">
       <swiper class="" indicator-dots="true" autoplay="" interval="" duration="500">
         <block wx:for="{{userList}}">
@@ -74,16 +75,17 @@
         <view class="meetText">翻 牌</view>
       </view>
     </view>
+    <!--写卡片-->
     <view class="mainContent" style="z-index: {{page.z_index_writeCard}}">
       <scroll-view scroll-y="true" style="height: 100%;" >
         <view class="userInfo">
           <view class="infoItem">
             <text class="textTitle">其他</text>
-            <view class="infoBox">
+            <view class="">
               <text class="textStyle">需要的东西</text>
               <textarea class="textBox" />
             </view>
-            <view class="infoBox">
+            <view class="">
               <text class="textStyle">留言</text>
               <textarea class="textBox" />
             </view>
@@ -96,6 +98,7 @@
         </view>
       </scroll-view>
     </view>
+    <!--查看/编辑个人信息-->
     <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
       <scroll-view scroll-y="true" style="height: 100%;" >
         <view class="userInfo">
@@ -164,6 +167,7 @@
         </view>
       </scroll-view>
     </view>
+    <!--设置-->
     <view class="mainContent" style="z-index: {{page.z_index_setInfo}}">
       <scroll-view scroll-y style="height: 100%;" >
         <view class="userInfo">
@@ -187,18 +191,23 @@
             </view>
             <view class="infoBox">
               <text class="textStyle">年龄</text>
-              <view class="birthView">
-                <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="18" max="100" show-value/>
+              <view class="silderView">
+                <view class="startNum">16</view>
+                <slider class="silder" bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="16" max="50" show-value/>
               </view>
             </view>
             <view class="infoBox">
               <text class="textStyle">距离</text>
-              <slider bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="0" max="20" show-value/>
+              <view class="silderView">
+                <view class="startNum">0</view>
+                <slider class="silder" bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="0" max="20" show-value/>
+              </view>
             </view>
           </view>
         </view>
       </scroll-view>
     </view>
+    <!--我的卡片-->
     <view class="mainContent" style="z-index: {{page.z_index_getBrand}}">
       <scroll-view scroll-y style="height: 100%;" >
         <view class="chooseCardType">
@@ -265,12 +274,12 @@
 </view>
 <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
     <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
-      <view class="user-face-wrapper">
+      <view class="user-face-wrapper" catchtap="gotoMyInfo">
         <view class="user_face_box">
           <image class="user-face" src="../../imgs/ic_face.png"></image>
-          <view class="classname">我的名字</view>
-          <view class="classname">点击编辑</view>
         </view>
+        <view class="myName">我的名字</view>
+        <view class="myInfo">点击查看/编辑</view>
       </view>
       <view class="one-menu" catchtap="gotoIndex">
           <text>卡片信息</text>
@@ -278,9 +287,9 @@
       <view class="one-menu" catchtap="gotoWriteCard">
           <text>写卡片</text>
       </view>
-      <view class="one-menu" catchtap="gotoMyInfo">
+      <!--<view class="one-menu" catchtap="gotoMyInfo">
           <text>我的信息</text>
-      </view>
+      </view>-->
       <view class="one-menu" catchtap="gotoMyBrand">
           <text>我的卡片</text>
       </view>
