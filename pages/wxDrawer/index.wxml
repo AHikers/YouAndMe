@@ -266,7 +266,11 @@
 <view bindtouchstart="handlerStart" catchtouchmove="handlerMove" bindtouchcancel="handlerCancel" bindtouchend="handlerEnd" class="user" style="width: {{ui.menuWidth}}px">
     <view style="width: {{ui.menuWidth}}px;left:{{-ui.menuWidth/3 + ui.offsetLeft/3}}px" class="user-box {{!ui.tStart? 'withAnimate': ''}}">
       <view class="user-face-wrapper">
-        <image class="user-face" src="../../imgs/ic_face.png"></image>
+        <view class="user_face_box">
+          <image class="user-face" src="../../imgs/ic_face.png"></image>
+          <view class="classname">我的名字</view>
+          <view class="classname">点击编辑</view>
+        </view>
       </view>
       <view class="one-menu" catchtap="gotoIndex">
           <text>卡片信息</text>
