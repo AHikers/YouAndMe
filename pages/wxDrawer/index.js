@@ -295,7 +295,8 @@ Page({
         self.setData({ 
           'userInfo.tempFilePaths': tempFilePaths
         });
-        /*wx.uploadFile({
+        /*let tempFilePaths = res.tempFilePaths
+        wx.uploadFile({
           url: 'http://example.weixin.qq.com/upload', //仅为示例，非真实的接口地址
           filePath: tempFilePaths[0],
           name: 'file',
@@ -309,5 +310,16 @@ Page({
         });*/
       }
     });
+  },
+  sendUserInfo() {
+    let userInfo = {
+      userName: "",
+      sex: 0,
+      school: "",
+      profession: "",
+      adress: "",
+      hobbies: ["打球","玩耍"],
+      age: 20
+    };
   }
 })

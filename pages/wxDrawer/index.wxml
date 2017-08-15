@@ -19,8 +19,39 @@
         <block wx:for="{{userList}}">
           <swiper-item>
             <view class="demandInfo">
+              <view class="selfPicArea">
+                <image src="{{item.pictrueUrl}}" class="selfPic"></image>
+                <view class="userInfoArea">
+                  <view class="infoItem animate">
+                    <view class="bg_pink">
+                      <view class="sexImage">
+                        <image src="../../imgs/sexIcon.png" class="sexIcon"></image>
+                      </view>
+                      <view class="ageNum">{{item.age}}</view>
+                    </view>
+                  </view>
+                  <view class="infoItem animate">学校&专业：同济大学/工业工程</view>
+                  <view class="infoItem animate">
+                    <view class="w_auto f_l" style="width:25%;">兴趣/爱好：</view>
+                    <view class="f_l" style="width:75%;">
+                      <view class="hobbies f_l">打篮球</view>
+                      <view class="hobbies f_l">去图书馆</view>
+                    </view>
+                  </view>
+                  <view class="infoItem animate">地址：同济大学嘉定校区7号楼</view>
+                </view>
+              </view>
+              <view class="demandArea">
+                <view class="demandImg">
+                  <image src="../../imgs/user1.jpg" class="demandImgSize"></image>
+                </view>
+                <view class="demandText">
+                  <text class="text animate">哒嘀哒嘀哒嘀哒--哒嘀哒嘀哒嘀哒-dadida-dadidadidaidadidai-</text>
+                </view>
+              </view>
+
               <!--<view class="demandHead">
-              </view>-->
+              </view>
               <view class="distance">
                 <view class="distanceText">
                   距离
@@ -29,8 +60,6 @@
                   {{item.distance}} km
                 </view>
               </view>
-              <!--<view class="popularity">
-              </view>-->
               <view class="demandName">
                 <view class="age">
                   <view class="sexImage">
@@ -61,18 +90,13 @@
                 <view class="message">
                   {{item.giveMessage}}
                 </view>
-              </view>
+              </view>-->
             </view>
           </swiper-item>
         </block>
-        <swiper-item>
-          <view class="demandInfo2">
-      
-          </view>
-        </swiper-item>
       </swiper>
       <view class="getDemand">
-        <view class="meetText">翻 牌</view>
+        <view class="meetText">get</view>
       </view>
     </view>
     <!--写卡片-->
@@ -173,7 +197,7 @@
         <view class="userInfo">
           <view class="infoItem">
             <text class="textTitle">向我显示</text>
-            <view class="infoBox">
+            <view class="setInfo">
               <text class="textStyle">显示性别</text>
               <view class="sexRadio">
                 <radio-group class="group">
@@ -189,14 +213,14 @@
                 </radio-group>
               </view>
             </view>
-            <view class="infoBox">
+            <view class="setInfo">
               <text class="textStyle">年龄</text>
               <view class="silderView">
                 <view class="startNum">16</view>
                 <slider class="silder" bindchange="slider1change" left-icon="cancel" right-icon="success_no_circle" min="16" max="50" show-value/>
               </view>
             </view>
-            <view class="infoBox">
+            <view class="setInfo">
               <text class="textStyle">距离</text>
               <view class="silderView">
                 <view class="startNum">0</view>
