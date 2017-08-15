@@ -101,26 +101,19 @@
     </view>
     <!--写卡片-->
     <view class="mainContent" style="z-index: {{page.z_index_writeCard}}">
-      <scroll-view scroll-y="true" style="height: 100%;" >
-        <view class="userInfo">
-          <view class="infoItem">
-            <text class="textTitle">其他</text>
-            <view class="">
-              <text class="textStyle">需要的东西</text>
-              <textarea class="textBox" />
+      <view style="height: 100%;" >
+        <view class="demandInfo">
+          <view class="writeDemandArea">
+            <view class="uploadImageArea">
+              <image src="{{userInfo.tempFilePaths}}" class="needImage" bindtap="upLoadUserImg"></image>
             </view>
-            <view class="">
-              <text class="textStyle">留言</text>
-              <textarea class="textBox" />
+            <view class="write">
+              <textarea placeholder="请输入您需要的东西" class="writeText" maxlength="50" />
             </view>
+            <view class="commit">提交</view>
           </view>
-          <view class="infoItem">
-            <button type="primary" size="{{}}" loading="{{}}" plain="{{}}"
-        disabled="{{}}" bindtap="primary"> 发布 </button>
-          </view>
-          <view style="width:100%;height:120rpx;"></view>
         </view>
-      </scroll-view>
+      </view>
     </view>
     <!--查看/编辑个人信息-->
     <view class="mainContent" style="z-index: {{page.z_index_myInfo}}">
